@@ -4,6 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Quadro dos Sonhos - Carlos Eduardo. Confira minhas metas e inspirações, além de conhecer minha trajetória para me tornar um programador Full Stack.">
+    <meta name="keywords"
+        content="Carlos Eduardo, Programador Full Stack, Metas, Quadro dos Sonhos, João Pessoa, Paraíba">
+
     <title>Quadro dos Sonhos</title>
 
     <link rel="stylesheet" href="styleqds.css">
@@ -13,17 +18,14 @@
 
     <header id="q-sonho">
         <h1>Quadro dos Sonhos</h1>
-        <nav>
+        <nav class="links-2">
 
-            <form id="links-2" target="_blank" action="" method="post">
-
-                <a href="#home">Inicio</a>
-                <a href="#about">Sobre</a>
-                <a href="#contact">Contato</a>
-
-            </form>
+            <a id="inicio" href="#home">Início</a>
+            <a href="#about">Sobre</a>
+            <a href="#contact">Contato</a>
 
         </nav>
+
     </header>
     <div class="caixa-geral">
         <main>
@@ -44,15 +46,16 @@
                     <p>Nas horas vagas gosto de assistir um filme com a família, ler livros, fazer academia, estudar um
                         pouco mais(estou bem mais focado ultimamente)</p>
 
-                        <br><br>
-                        <h3>Minha inspiração</h3>
-                        <br><br>
-                        <p>Minha Primogênita & Meu Grande Homem !</p>    
-                        <br>
-                        
-                        <img height="200px" width="250px" src="../../iPhone Cleydinha/202208__/AAFZ2691.JPG" alt="Eduardo-Imagem" >
-                        <p><u>Kawanny Victória Soares Dos Santos</u></p>
-                        <p><u>Kawan Victor Araújo Dos Santos</u></p>
+                    <br><br>
+                    <h3>Minha inspiração</h3>
+                    <br><br>
+                    <p>Minha Primogênita & Meu Grande Homem !</p>
+                    <br>
+
+                    <img height="200px" width="250px" src="../../iPhone Cleydinha/202208__/AAFZ2691.JPG"
+                        alt="Foto de Carlos Eduardo com seus filhos, Kawanny Victória e Kawan Victor">
+                    <p><u>Kawanny Victória Soares Dos Santos</u></p>
+                    <p><u>Kawan Victor Araújo Dos Santos</u></p>
 
                 </article>
             </section>
@@ -133,29 +136,22 @@
 
     <script> // ** JavaScript **
 
-        // Seleciona o botão e as checkboxes para a seção "Médio prazo"
-        const btnMarcarTodosMedio = document.getElementById('marcar-todos-medio');
-        const checkboxesMedio = document.querySelectorAll('.section-two input[type="checkbox"]');
+        function toggleCheckboxes(buttonId, sectionSelector) {
+            const btn = document.getElementById(buttonId);
+            const checkboxes = document.querySelectorAll(`${sectionSelector} input[type="checkbox"]`);
 
-        // Função para alternar marcar/desmarcar todas as checkboxes da seção "Médio prazo"
-        btnMarcarTodosMedio.addEventListener('click', () => {
-            const todosMarcados = Array.from(checkboxesMedio).every(checkbox => checkbox.checked); // Verifica se todas estão marcadas
-            checkboxesMedio.forEach(checkbox => {
-                checkbox.checked = !todosMarcados; // Marca ou desmarca todas dependendo do estado atual
+            btn.addEventListener('click', () => {
+                const todosMarcados = Array.from(checkboxes).every(checkbox => checkbox.checked);
+                checkboxes.forEach(checkbox => {
+                    checkbox.checked = !todosMarcados;
+                });
             });
-        });
+        }
 
-        // Seleciona o botão e as checkboxes para a seção "Longo prazo"
-        const btnMarcarTodosLongo = document.getElementById('marcar-todos-longo');
-        const checkboxesLongo = document.querySelectorAll('.section-three input[type="checkbox"]');
+        // Chame a função para ambas as seções
+        toggleCheckboxes('marcar-todos-medio', '.section-two');
+        toggleCheckboxes('marcar-todos-longo', '.section-three');
 
-        // Função para alternar marcar/desmarcar todas as checkboxes da seção "Longo prazo"
-        btnMarcarTodosLongo.addEventListener('click', () => {
-            const todosMarcados = Array.from(checkboxesLongo).every(checkbox => checkbox.checked); // Verifica se todas estão marcadas
-            checkboxesLongo.forEach(checkbox => {
-                checkbox.checked = !todosMarcados; // Marca ou desmarca todas dependendo do estado atual
-            });
-        });
     </script>
 
 
@@ -170,7 +166,8 @@
     </aside>
 
     <footer>
-        <p id="rodape-sonho">&copy; 2025 Quadro dos Sonhos. Todos os sonhos reservados.</p>
+        <p id="rodape-sonho">&copy; 2025 Quadro dos Sonhos. Todos os direitos reservados.</p>
+        <p><a for="inicio" href="#inicio">Voltar ao topo</a></p>
     </footer>
 
 </body>
