@@ -1,0 +1,83 @@
+#q-sonho{
+    text-align: center;
+    border: 1px solid color aqua; 
+    font-family: Georgia;
+    margin: 100px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+}
+#links-2{
+    margin-top: 20px;
+    
+
+}
+section.section-one{
+    background-color: white;
+    color: black;
+    border: 1px solid rgb(0, 0, 0); /* Exemplo de borda */
+    text-align: center;
+    font-family: Georgia;
+    font-size: 14px; 
+    margin-left: 470px;
+    margin-right: 470px;
+}
+
+section.section-two {
+    background-color: white;
+    color: black;
+    border: 1px solid rgb(0, 0, 0); /* Exemplo de borda */
+    text-align: center;
+    font-family: Georgia;
+    font-size: 14px; 
+    margin-left: 470px;
+    margin-right: 470px;
+    margin-top: 10px;
+    
+
+
+
+}  
+
+section.section-three {
+    background-color: white;
+    color: black;
+    border: 1px solid rgb(0, 0, 0); /* Exemplo de borda */
+    text-align: center;
+    font-family: Georgia;
+    font-size: 14px;
+    margin-top: 10px;
+    margin-left: 470px;
+    margin-right: 470px;
+
+}  
+
+.h3-medio{
+    text-align: center;
+    font-family: Georgia;
+    font-size: 17px;
+}
+
+.he-longo{
+    text-align: center;
+    font-family: Georgia;
+    font-size: 17px;
+}
+
+button{
+    background-color: white;
+    color: black;  
+    font-size: 14px;
+    font-family: Georgia;
+    border-radius: 4px;
+}
+#links-1{
+    text-align: center;
+    display: grid;
+    margin-top: 10px;
+   
+}
+#rodape-sonho{
+    text-align:center;
+    margin-top: 50px;
+}

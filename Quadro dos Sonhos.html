@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quadro dos Sonhos</title>
+
+    <link rel="stylesheet" href="styleqds.css">
+</head>
+
+<body>
+
+    <header id="q-sonho">
+        <h1>Quadro dos Sonhos</h1>
+        <nav>
+
+            <form id="links-2" target="_blank" action="" method="post">
+
+                <a href="#home">Inicio</a>
+                <a href="#about">Sobre</a>
+                <a href="#contact">Contato</a>
+
+            </form>
+
+        </nav>
+    </header>
+    <div class="caixa-geral">
+        <main>
+            <section class="section-one">
+                <article>
+                    <h2>Quem sou Eu...</h2>
+
+                    <p>Me chamo Carlos Eduardo</p>
+                    <p>Tenho 24 anos</p>
+                    <p>Sou natural de João Pessoa, Paraíba(Onde resido)</p>
+                    <p>Sou casado & Pai de 3 filhos</p>
+                    <p>Tenho um grande sonho de ser um programador Full Stack</p>
+                    <p>Sou determinado, focado e muito curioso na área, <br>gosto de se aprofundar no assunto</p>
+                    <p>Atualmente atuo na área de Atendente de Telemarketing, <br>sou um profissional em transição de
+                        carreira</p>
+                    <p>Sou uma pessoa divertida, introvertida, perfeccionista, proativa, com um espírito de liderança
+                    </p>
+                    <p>Nas horas vagas gosto de assistir um filme com a família, ler livros, fazer academia, estudar um
+                        pouco mais(estou bem mais focado ultimamente)</p>
+
+                        <br><br>
+                        <h3>Minha inspiração</h3>
+                        <br><br>
+                        <p>Minha Primogênita & Meu Grande Homem !</p>    
+                        <br>
+                        
+                        <img height="200px" width="250px" src="../../iPhone Cleydinha/202208__/AAFZ2691.JPG" alt="Eduardo-Imagem" >
+                        <p><u>Kawanny Victória Soares Dos Santos</u></p>
+                        <p><u>Kawan Victor Araújo Dos Santos</u></p>
+
+                </article>
+            </section>
+
+            <section class="section-two">
+                <article>
+                    <h3 class="h3-medio">Metas: Médio prazo</h3>
+                    <label>Marcar/Desmarcar:
+                        <button type="button" id="marcar-todos-medio">Marcar Todos Medio</button>
+                    </label>
+                    <div id="metas-mediop">
+
+                        <p>Conseguir meu primeiro emprego - 3 meses
+                            <input type="checkbox" id="meta-1" name="meta-1">
+                        </p>
+                        <p>Comprar uma cama Queen com meu novo salário - 4° mês
+                            <input type="checkbox" id="meta-2" name="meta-2">
+                        </p>
+                        <p>Receber meu salário 6k+ - 6 meses
+                            <input type="checkbox" id="meta-3" name="meta-3">
+                        </p>
+                        <p>Comprar um iPhone 13 pro max - 6 meses
+                            <input type="checkbox" id="meta-4" name="meta-4">
+                        </p>
+                        <p>Montar meu setup - 6 meses
+                            <input type="checkbox" id="meta-5" name="meta-5">
+                        </p>
+                        <p>Comprar o primeiro carro em 2025
+                            <input type="checkbox" id="meta-6" name="meta-6">
+                        </p>
+                        <p>Comprar uma Smart TV 50" - 8 meses
+                            <input type="checkbox" id="meta-7" name="meta-7">
+                        </p>
+                        <p>Possuir a habilitação A e B - 8 meses
+                            <input type="checkbox" id="meta-8" name="meta-8">
+                        </p>
+                        <p>Comprar roupas novas para toda a família - 8 meses
+                            <input type="checkbox" id="meta-9" name="meta-9">
+                        </p>
+
+                    </div>
+                </article>
+            </section>
+
+            <section class="section-three">
+                <article>
+                    <h3 class="h3-longo">Metas: Longo prazo</h3>
+                    <label class="label-1">Marcar/Desmarcar:
+                        <button type="button" id="marcar-todos-longo">Marcar Todos Longo</button>
+                    </label>
+
+                    <p>Liberdade financeira - 1 ano
+                        <input type="checkbox" id="meta-1l" name="meta-1l">
+                    </p>
+                    <p>Full Stack Pleno - 1 ano
+                        <input type="checkbox" id="meta-2l" name="meta-2l">
+                    </p>
+                    <p>Salário 20k+ - 1 ano
+                        <input type="checkbox" id="meta-3l" name="meta-3l">
+                    </p>
+                    <p>Se casar na igreja em 2025
+                        <input type="checkbox" id="meta-4l" name="meta-4l">
+                    </p>
+                    <p>Comprar Volkswagen Polo 2025 Comfortline - 1 ano
+                        <input type="checkbox" id="meta-5l" name="meta-5l">
+                    </p>
+                    <p>Viajar para a Europa (3 dias)(A decidir o local) - 1 ano
+                        <input type="checkbox" id="meta-6l" name="meta-6l">
+                    </p>
+                    <p>Comprar/construir minha casa - 3 anos
+                        <input type="checkbox" id="meta-7l" name="meta-7l">
+                    </p>
+
+                </article>
+            </section>
+        </main>
+    </div>
+
+    <script> // ** JavaScript **
+
+        // Seleciona o botão e as checkboxes para a seção "Médio prazo"
+        const btnMarcarTodosMedio = document.getElementById('marcar-todos-medio');
+        const checkboxesMedio = document.querySelectorAll('.section-two input[type="checkbox"]');
+
+        // Função para alternar marcar/desmarcar todas as checkboxes da seção "Médio prazo"
+        btnMarcarTodosMedio.addEventListener('click', () => {
+            const todosMarcados = Array.from(checkboxesMedio).every(checkbox => checkbox.checked); // Verifica se todas estão marcadas
+            checkboxesMedio.forEach(checkbox => {
+                checkbox.checked = !todosMarcados; // Marca ou desmarca todas dependendo do estado atual
+            });
+        });
+
+        // Seleciona o botão e as checkboxes para a seção "Longo prazo"
+        const btnMarcarTodosLongo = document.getElementById('marcar-todos-longo');
+        const checkboxesLongo = document.querySelectorAll('.section-three input[type="checkbox"]');
+
+        // Função para alternar marcar/desmarcar todas as checkboxes da seção "Longo prazo"
+        btnMarcarTodosLongo.addEventListener('click', () => {
+            const todosMarcados = Array.from(checkboxesLongo).every(checkbox => checkbox.checked); // Verifica se todas estão marcadas
+            checkboxesLongo.forEach(checkbox => {
+                checkbox.checked = !todosMarcados; // Marca ou desmarca todas dependendo do estado atual
+            });
+        });
+    </script>
+
+
+
+    <aside id="links-1">
+        <h3>Redes Sociais</h3>
+
+        <a target="_blank" href="https://www.linkedin.com/in/carlos-eduardo-27497a215/">LinkedIn</a>
+        <br>
+        <a target="_blank" href="https://www.instagram.com/carlosgomes171911/">Instagram</a>
+
+    </aside>
+
+    <footer>
+        <p id="rodape-sonho">&copy; 2025 Quadro dos Sonhos. Todos os sonhos reservados.</p>
+    </footer>
+
+</body>
+
+</html>
